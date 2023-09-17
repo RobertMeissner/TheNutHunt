@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://ct3fx6a6fu8g8"
+path="res://.godot/imported/swimming.dialogue-673552d1a37beb89ec6ad91db1683401.tres"
+
+[deps]
+
+source_file="res://res/Dialog/swimming.dialogue"
+dest_files=["res://.godot/imported/swimming.dialogue-673552d1a37beb89ec6ad91db1683401.tres"]
+
+[params]
+
+defaults=true

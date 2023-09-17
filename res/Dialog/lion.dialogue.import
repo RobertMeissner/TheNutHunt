@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://gelbgaum0g5u"
+path="res://.godot/imported/lion.dialogue-9bffa20e3d551f9afdc99adc6961e004.tres"
+
+[deps]
+
+source_file="res://res/Dialog/lion.dialogue"
+dest_files=["res://.godot/imported/lion.dialogue-9bffa20e3d551f9afdc99adc6961e004.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,40 @@
+~ start
+
+Höhli: {{State.player_name}}.
+if State.has_done_swimming:
+	=> help_searching
+Höhli: Wir waren schon ewig nicht mehr Schwimmen! Lass uns mal wieder Kraulen gehen.
+{{State.player_name}}: Mmmh.
+- Ja gerne, wie wäre es mit jetzt?
+	=> want_to_swim
+- Neee, ich suche nach den Nüssen für den Kuchen. Weißt du mehr dazu?
+	Höhli: Puuh, da muss ich erstmal nachdenken.
+	Höhli: ...
+	Höhli: Ich kann mich so nicht konzentrieren. Ich muss wohl erstmal schwimmen gehen.
+
+=> END
+
+~ want_to_swim
+Höhli: Großartig.
+if not State.has_swimming_googles:
+	Höhli wird plötzlich verlegen.
+	Höhli: Ich habe leider meine Schwimmbrille verlegt. Kannst du mir helfen sie zu finden?
+	{{State.player_name}}: Klar, gerne.
+	set State.can_search_swimming_googles = true
+	do Events._emit_search_swimming_googles()
+else:
+	Höhli: Auf geht es! Am besten schwimmt es sich am Pier mit dem Ruderboot!
+	set State.can_go_swimming = true
+	Höhli: Komm danach zurück zu mir, ich überlege noch wo die Nüsse sein könnten ...
+
+=> END
+
+~ help_searching
+Höhli: Das tat richtig gut, oder?
+{{State.player_name}}: Ja, Wasser ist einfach das Beste.
+Höhli: Jau.
+Höhli: Mir ist mittlerweile eingefallen, wer dir mit den Nüssen helfen könnte!
+Höhli: Frag mal den Löwen, der kommt ja viel rum.
+set State.has_done_caveman = true
+
+=> END

@@ -1,0 +1,37 @@
+~ start
+
+if not State.has_done_caveman:
+	=> busy
+
+if State.has_climbed:
+	=> climbed
+Vor dir steht ein Löwe.
+Löwe: Roooaaar {{State.player_name}}!!
+Löwe: Weißt du, wo ich heute schon war?!
+{{State.player_name}}: Nein?
+Der Löwe flext seine Muskeln und zeigt auf die Felsen in der Ferne.
+Löwe: Daaaa waaar ich heute schon oben!!
+Löwe: Warst du mal wieder bouldern?
+- Nein. Ich habe leider keine Zeit und suche Nüsse ...
+- Noch nicht. Aber das wäre ziemlich cool gerade
+	Löwe: Nice, dann nimm hier noch mein Chalk. Ohne tut es echt weh.
+	set State.has_chalk = true
+	Löwe: Komm danach gerne zurück zu mir, dann kann ich dir vielleicht weiterhelfen.
+
+=> END
+
+~ busy
+
+Vor dir macht ein Löwe HIIT.
+Löwe: Uff {{State.player_name}}!!
+Löwe: Ich bin mitten im Training, kommt später vorbei.
+
+=> END
+~ climbed
+
+Löwe: Nice {{State.player_name}}. Das tat bestimmt gut.
+{{State.player_name}}: Jaa, und jetzt tun meine Finger weh :D 
+{{State.player_name}}: Übrigens, weißt du denn, wo die Nüsse sind?
+Löwe: Mmmh, nein. Aber vielleicht weiß der Frosch, wo sie sind?
+set State.has_done_climbing = true
+=> END

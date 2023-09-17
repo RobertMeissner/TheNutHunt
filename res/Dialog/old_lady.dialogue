@@ -1,0 +1,52 @@
+~ start
+
+if not State.has_done_olives:
+	=> busy
+
+if State.has_rested_on_bench:
+	=> relaxed
+
+Alte Dame: Hallo {{State.player_name}}.
+Alte Dame: Hast du dich heute schon mal ausgeruht und einfach den Tag genossen?
+- Nein! Ich suche die Nüsse für den Kuchen. Kannst du mir helfen sie zu finden?
+	Alte Dame: Oh, diese alten Knochen können sich kaum noch bewegen. Du musst fürchte ich ohne mich suchen.
+	=> END
+- Nein. Aber warum nicht einfach jetzt?
+	=> relaxing
+=> END
+
+~ busy
+
+[wave amp=25 freq=5] Vor dir sitzt eine Alte Dame auf einer Bank.[/wave]
+
+[shake rate=20 level=10] Sie schläft. Mal wieder.[/shake]
+Nichts zu machen, du willst die Dame nicht stören.
+
+=> END!
+
+~ relaxed
+Alte Dame: {{State.player_name}}.
+Alte Dame: Möchtest du nochmal mit mir sitzen?
+- Ja!
+	=> relaxing
+- Nein.
+
+=> END
+
+~ relaxing
+
+Alte Dame: Schön, setz dich.
+Du setzt dich hin und genießt die Aussicht über das Meer, während die Sonne auf dem Wasser glitzert.
+...
+...
+...
+{{State.player_name}}: Das tat soo gut. Jetzt gehe ich weiter suchen.
+{{State.player_name}}: Weißt du denn, wo die Nüsse sind?
+Alte Dame: Mmh, in unserem Dorf gehen Nüsse nicht einfach so verloren.
+Alte Dame: Aber hier wohnt noch jemand, aber gut versteckt. Wenn du genau hinschaust, dann kannst du sie sehen.
+Sie zwinkert dir zu.
+set State.has_rested_on_bench = true
+set State.can_find_nuts = true
+do Events._emit_can_find_nuts()
+
+=> END

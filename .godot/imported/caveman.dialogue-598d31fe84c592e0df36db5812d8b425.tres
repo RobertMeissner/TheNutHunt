@@ -1,0 +1,408 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mmbip"]
+
+[resource]
+script = ExtResource("1_mmbip")
+titles = {
+"help_searching": "33",
+"start": "3",
+"want_to_swim": "18"
+}
+character_names = PackedStringArray("Höhli", "{{State.player_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"next_id": "11",
+"next_id_after": "15",
+"text": "Neee, ich suche nach den Nüssen für den Kuchen. Weißt du mehr dazu?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Neee, ich suche nach den Nüssen für den Kuchen. Weißt du mehr dazu?",
+"type": "response"
+},
+"11": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "10",
+"text": "Puuh, da muss ich erstmal nachdenken.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Puuh, da muss ich erstmal nachdenken.",
+"type": "dialogue"
+},
+"12": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "10",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"13": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "15",
+"parent_id": "10",
+"text": "Ich kann mich so nicht konzentrieren. Ich muss wohl erstmal schwimmen gehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich kann mich so nicht konzentrieren. Ich muss wohl erstmal schwimmen gehen.",
+"type": "dialogue"
+},
+"15": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"17": {
+"next_id": "18",
+"text": "want_to_swim",
+"type": "title"
+},
+"18": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"text": "Großartig.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Großartig.",
+"type": "dialogue"
+},
+"19": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_swimming_googles"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "25",
+"next_id": "20",
+"next_id_after": "30",
+"type": "condition"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "19",
+"text": "Höhli wird plötzlich verlegen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Höhli wird plötzlich verlegen.",
+"type": "dialogue"
+},
+"21": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "22",
+"parent_id": "19",
+"text": "Ich habe leider meine Schwimmbrille verlegt. Kannst du mir helfen sie zu finden?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich habe leider meine Schwimmbrille verlegt. Kannst du mir helfen sie zu finden?",
+"type": "dialogue"
+},
+"22": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "23",
+"parent_id": "19",
+"text": "Klar, gerne.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Klar, gerne.",
+"type": "dialogue"
+},
+"23": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "can_search_swimming_googles"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "24",
+"parent_id": "19",
+"type": "mutation"
+},
+"24": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "_emit_search_swimming_googles",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "30",
+"parent_id": "19",
+"type": "mutation"
+},
+"25": {
+"next_conditional_id": "30",
+"next_id": "26",
+"next_id_after": "30",
+"type": "condition"
+},
+"26": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"parent_id": "25",
+"text": "Auf geht es! Am besten schwimmt es sich am Pier mit dem Ruderboot!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf geht es! Am besten schwimmt es sich am Pier mit dem Ruderboot!",
+"type": "dialogue"
+},
+"27": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "can_go_swimming"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "28",
+"parent_id": "25",
+"type": "mutation"
+},
+"28": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "30",
+"parent_id": "25",
+"text": "Komm danach zurück zu mir, ich überlege noch wo die Nüsse sein könnten ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Komm danach zurück zu mir, ich überlege noch wo die Nüsse sein könnten ...",
+"type": "dialogue"
+},
+"3": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "{{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "{{State.player_name}}.",
+"type": "dialogue"
+},
+"30": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"32": {
+"next_id": "33",
+"text": "help_searching",
+"type": "title"
+},
+"33": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "34",
+"text": "Das tat richtig gut, oder?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das tat richtig gut, oder?",
+"type": "dialogue"
+},
+"34": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "35",
+"text": "Ja, Wasser ist einfach das Beste.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja, Wasser ist einfach das Beste.",
+"type": "dialogue"
+},
+"35": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "36",
+"text": "Jau.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Jau.",
+"type": "dialogue"
+},
+"36": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "37",
+"text": "Mir ist mittlerweile eingefallen, wer dir mit den Nüssen helfen könnte!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mir ist mittlerweile eingefallen, wer dir mit den Nüssen helfen könnte!",
+"type": "dialogue"
+},
+"37": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "38",
+"text": "Frag mal den Löwen, der kommt ja viel rum.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Frag mal den Löwen, der kommt ja viel rum.",
+"type": "dialogue"
+},
+"38": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_caveman"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "40",
+"type": "mutation"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_swimming"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "6",
+"next_id": "5",
+"next_id_after": "6",
+"type": "condition"
+},
+"40": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"is_snippet": false,
+"next_id": "33",
+"parent_id": "4",
+"type": "goto"
+},
+"6": {
+"character": "Höhli",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "Wir waren schon ewig nicht mehr Schwimmen! Lass uns mal wieder Kraulen gehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wir waren schon ewig nicht mehr Schwimmen! Lass uns mal wieder Kraulen gehen.",
+"type": "dialogue"
+},
+"7": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "8",
+"text": "Mmmh.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh.",
+"type": "dialogue"
+},
+"8": {
+"next_id": "9",
+"next_id_after": "15",
+"responses": PackedStringArray("8", "10"),
+"text": "Ja gerne, wie wäre es mit jetzt?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja gerne, wie wäre es mit jetzt?",
+"type": "response"
+},
+"9": {
+"is_snippet": false,
+"next_id": "18",
+"parent_id": "8",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

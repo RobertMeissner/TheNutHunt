@@ -1,0 +1,16 @@
+~ start
+
+Du siehst ein Boot im Wasser.
+Das Wasser ist kristallglass, kleine Fische tümmeln sich hier und da.
+if not State.has_swimming_googles:
+	Du würdest am liebsten direkt reinspringen und schwimmen.
+else:
+	Möchtest du schwimmen gehen?
+	- Ja.
+		Du springst hinein und das Wasser ist perfekt.
+		Die Sicht ist so klar, du kannst den Fischen um dich herum beim Futtern und Schwimmen zusehen.
+		Es ist herrlich.
+		set State.has_done_swimming = true
+	- Nein.
+
+=> END

@@ -1,0 +1,370 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_a61kb"]
+
+[resource]
+script = ExtResource("1_a61kb")
+titles = {
+"busy": "25",
+"climbed": "32",
+"start": "3"
+}
+character_names = PackedStringArray("Löwe", "{{State.player_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"text": "Weißt du, wo ich heute schon war?!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Weißt du, wo ich heute schon war?!",
+"type": "dialogue"
+},
+"11": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "12",
+"text": "Nein?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein?",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"text": "Der Löwe flext seine Muskeln und zeigt auf die Felsen in der Ferne.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Der Löwe flext seine Muskeln und zeigt auf die Felsen in der Ferne.",
+"type": "dialogue"
+},
+"13": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "14",
+"text": "Daaaa waaar ich heute schon oben!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Daaaa waaar ich heute schon oben!!",
+"type": "dialogue"
+},
+"14": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "15",
+"text": "Warst du mal wieder bouldern?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Warst du mal wieder bouldern?",
+"type": "dialogue"
+},
+"15": {
+"next_id": "21",
+"next_id_after": "21",
+"responses": PackedStringArray("15", "16"),
+"text": "Nein. Ich habe leider keine Zeit und suche Nüsse ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein. Ich habe leider keine Zeit und suche Nüsse ...",
+"type": "response"
+},
+"16": {
+"next_id": "17",
+"next_id_after": "21",
+"text": "Noch nicht. Aber das wäre ziemlich cool gerade",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Noch nicht. Aber das wäre ziemlich cool gerade",
+"type": "response"
+},
+"17": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "18",
+"parent_id": "16",
+"text": "Nice, dann nimm hier noch mein Chalk. Ohne tut es echt weh.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nice, dann nimm hier noch mein Chalk. Ohne tut es echt weh.",
+"type": "dialogue"
+},
+"18": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_chalk"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "19",
+"parent_id": "16",
+"type": "mutation"
+},
+"19": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "16",
+"text": "Komm danach gerne zurück zu mir, dann kann ich dir vielleicht weiterhelfen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Komm danach gerne zurück zu mir, dann kann ich dir vielleicht weiterhelfen.",
+"type": "dialogue"
+},
+"21": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"23": {
+"next_id": "25",
+"text": "busy",
+"type": "title"
+},
+"25": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "26",
+"text": "Vor dir macht ein Löwe HIIT.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vor dir macht ein Löwe HIIT.",
+"type": "dialogue"
+},
+"26": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"text": "Uff {{State.player_name}}!!",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Uff {{State.player_name}}!!",
+"type": "dialogue"
+},
+"27": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "29",
+"text": "Ich bin mitten im Training, kommt später vorbei.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich bin mitten im Training, kommt später vorbei.",
+"type": "dialogue"
+},
+"29": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_caveman"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "6",
+"next_id": "4",
+"next_id_after": "6",
+"type": "condition"
+},
+"30": {
+"next_id": "32",
+"text": "climbed",
+"type": "title"
+},
+"32": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "33",
+"text": "Nice {{State.player_name}}. Das tat bestimmt gut.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Nice {{State.player_name}}. Das tat bestimmt gut.",
+"type": "dialogue"
+},
+"33": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "34",
+"text": "Jaa, und jetzt tun meine Finger weh :D",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Jaa, und jetzt tun meine Finger weh :D",
+"type": "dialogue"
+},
+"34": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "35",
+"text": "Übrigens, weißt du denn, wo die Nüsse sind?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Übrigens, weißt du denn, wo die Nüsse sind?",
+"type": "dialogue"
+},
+"35": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "36",
+"text": "Mmmh, nein. Aber vielleicht weiß der Frosch, wo sie sind?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh, nein. Aber vielleicht weiß der Frosch, wo sie sind?",
+"type": "dialogue"
+},
+"36": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_climbing"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "37",
+"type": "mutation"
+},
+"37": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"is_snippet": false,
+"next_id": "25",
+"parent_id": "3",
+"type": "goto"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_climbed"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "8",
+"next_id": "7",
+"next_id_after": "8",
+"type": "condition"
+},
+"7": {
+"is_snippet": false,
+"next_id": "32",
+"parent_id": "6",
+"type": "goto"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"text": "Vor dir steht ein Löwe.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vor dir steht ein Löwe.",
+"type": "dialogue"
+},
+"9": {
+"character": "Löwe",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "Roooaaar {{State.player_name}}!!",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Roooaaar {{State.player_name}}!!",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

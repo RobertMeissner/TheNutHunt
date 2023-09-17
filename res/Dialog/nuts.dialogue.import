@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dd1d8ymareii4"
+path="res://.godot/imported/nuts.dialogue-db850028108b5678e4cc2fc322bee752.tres"
+
+[deps]
+
+source_file="res://res/Dialog/nuts.dialogue"
+dest_files=["res://.godot/imported/nuts.dialogue-db850028108b5678e4cc2fc322bee752.tres"]
+
+[params]
+
+defaults=true

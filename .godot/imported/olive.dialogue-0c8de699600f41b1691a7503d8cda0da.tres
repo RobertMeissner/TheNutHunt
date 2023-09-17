@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rvjfs"]
+
+[resource]
+script = ExtResource("1_rvjfs")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Korb voller Oliven")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "Korb voller Oliven",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Willst du eine Olive nehmen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Willst du eine Olive nehmen?",
+"type": "dialogue"
+},
+"4": {
+"next_id": "5",
+"next_id_after": "9",
+"responses": PackedStringArray("4", "7"),
+"text": "Ja",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja",
+"type": "response"
+},
+"5": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "olives"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "6",
+"parent_id": "4",
+"type": "mutation"
+},
+"6": {
+"character": "Korb voller Oliven",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "4",
+"text": "Du hast eine Olive genommen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du hast eine Olive genommen.",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "9",
+"text": "Nein",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein",
+"type": "response"
+},
+"8": {
+"character": "Korb voller Oliven",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "7",
+"text": "Du machst nichts.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du machst nichts.",
+"type": "dialogue"
+},
+"9": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

@@ -1,0 +1,337 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_f67us"]
+
+[resource]
+script = ExtResource("1_f67us")
+titles = {
+"busy": "24",
+"has_food": "31",
+"start": "3"
+}
+character_names = PackedStringArray("Frosch", "{{State.player_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "olives"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "11",
+"parent_id": "9",
+"type": "mutation"
+},
+"11": {
+"is_snippet": false,
+"next_id": "31",
+"parent_id": "9",
+"type": "goto"
+},
+"12": {
+"next_id": "13",
+"next_id_after": "20",
+"parent_id": "7",
+"text": "Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?",
+"type": "response"
+},
+"13": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"parent_id": "12",
+"text": "Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.",
+"type": "dialogue"
+},
+"14": {
+"next_conditional_id": "20",
+"next_id": "15",
+"next_id_after": "20",
+"type": "condition"
+},
+"15": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "16",
+"parent_id": "14",
+"text": "Mmmh...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh...",
+"type": "dialogue"
+},
+"16": {
+"next_id": "17",
+"next_id_after": "20",
+"parent_id": "14",
+"responses": PackedStringArray("16", "18"),
+"text": "Ja.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja.",
+"type": "response"
+},
+"17": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"parent_id": "16",
+"text": "Dann schnell, ich habe Hunger!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dann schnell, ich habe Hunger!",
+"type": "dialogue"
+},
+"18": {
+"next_id": "19",
+"next_id_after": "20",
+"parent_id": "14",
+"text": "Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?",
+"type": "response"
+},
+"19": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"parent_id": "18",
+"text": "Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.",
+"type": "dialogue"
+},
+"20": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"22": {
+"next_id": "24",
+"text": "busy",
+"type": "title"
+},
+"24": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "25",
+"text": "Vor dir liegt ein Frosch und döst.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vor dir liegt ein Frosch und döst.",
+"type": "dialogue"
+},
+"25": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"text": "Nichts zu machen. Er schläft.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nichts zu machen. Er schläft.",
+"type": "dialogue"
+},
+"27": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"29": {
+"next_id": "31",
+"text": "has_food",
+"type": "title"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_caveman"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "5",
+"next_id": "4",
+"next_id_after": "5",
+"type": "condition"
+},
+"31": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "32",
+"text": "Danke! oooh, sogar mit scharfer Soße dran. Die liebe ich!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Danke! oooh, sogar mit scharfer Soße dran. Die liebe ich!",
+"type": "dialogue"
+},
+"32": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "33",
+"text": "Du hast nach Nüssen gesucht, richtig?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du hast nach Nüssen gesucht, richtig?",
+"type": "dialogue"
+},
+"33": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "34",
+"text": "Also ich selbst kann nichts mit Nüssen anfangen, aber vielleicht kann dir die Alte Dame helfen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Also ich selbst kann nichts mit Nüssen anfangen, aber vielleicht kann dir die Alte Dame helfen?",
+"type": "dialogue"
+},
+"34": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_olives"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "36",
+"type": "mutation"
+},
+"36": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"is_snippet": false,
+"next_id": "24",
+"parent_id": "3",
+"type": "goto"
+},
+"5": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Hey {{State.player_name}}. Ich habe Hunger!",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Hey {{State.player_name}}. Ich habe Hunger!",
+"type": "dialogue"
+},
+"6": {
+"character": "Frosch",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "Kannst du mir Oliven bringen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Kannst du mir Oliven bringen?",
+"type": "dialogue"
+},
+"7": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "olives"
+}, {
+"type": "comparison",
+"value": ">"
+}, {
+"type": "number",
+"value": 0
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "14",
+"next_id": "8",
+"next_id_after": "20",
+"type": "condition"
+},
+"8": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "9",
+"parent_id": "7",
+"text": "Mmmh...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmmh...",
+"type": "dialogue"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "20",
+"parent_id": "7",
+"responses": PackedStringArray("9", "12"),
+"text": "Ja, ich habe sogar schon welche dabei.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja, ich habe sogar schon welche dabei.",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

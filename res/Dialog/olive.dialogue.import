@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b28y2pndwya55"
+path="res://.godot/imported/olive.dialogue-0c8de699600f41b1691a7503d8cda0da.tres"
+
+[deps]
+
+source_file="res://res/Dialog/olive.dialogue"
+dest_files=["res://.godot/imported/olive.dialogue-0c8de699600f41b1691a7503d8cda0da.tres"]
+
+[params]
+
+defaults=true

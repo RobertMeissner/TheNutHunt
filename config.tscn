@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgkxg0uo5eoav"]
+
+[ext_resource type="Script" path="res://config.gd" id="1_hxp5y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gohb3"]
+font_size = 9
+font_color = Color(0.741176, 0.741176, 0.741176, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hxp5y")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 40.0
+offset_right = 89.0
+offset_bottom = 63.0
+text = "Dein Name:"
+
+[node name="MyName" type="LineEdit" parent="Label"]
+layout_mode = 0
+offset_left = 209.0
+offset_right = 361.0
+offset_bottom = 31.0
+text = "Alice"
+max_length = 20
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 80.0
+offset_right = 227.0
+offset_bottom = 106.0
+text = "Name deines Lieblings:"
+
+[node name="OtherName" type="LineEdit" parent="Label2"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = -4.0
+offset_right = 362.0
+offset_bottom = 27.0
+text = "Bob"
+max_length = 20
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 51.0
+offset_top = 115.0
+offset_right = 229.0
+offset_bottom = 141.0
+text = "Schlusssatz"
+
+[node name="Final" type="TextEdit" parent="Label3"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = -4.0
+offset_right = 517.0
+offset_bottom = 89.0
+text = "Schön mit dir"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 297.0
+offset_right = 441.0
+offset_bottom = 333.0
+text = "Start!"
+
+[node name="Mobile" type="Label" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 242.0
+offset_right = 592.0
+offset_bottom = 276.0
+text = "Icons by https://godotmarketplace.com/shop/analog-stick/
+Tilesets, Sprites by: https://pixel-boy.itch.io/ninja-adventure-asset-pack
+Music by Yasunori Mitsuda: Chrono Cross - Dream of the Shore Near Another World"
+label_settings = SubResource("LabelSettings_gohb3")
+
+[node name="MobileControl" type="CheckBox" parent="Mobile"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 213.0
+offset_top = -34.0
+offset_right = 237.0
+offset_bottom = -10.0
+
+[node name="Credits" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 214.0
+offset_right = 593.0
+offset_bottom = 248.0
+text = "Steuerung für Handy:"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="toggled" from="Mobile/MobileControl" to="." method="_on_mobile_control_toggled"]

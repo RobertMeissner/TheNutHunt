@@ -1,0 +1,11 @@
+~ start
+
+Für einen Moment zweifelst du an dir.
+Der Korb mit den Nüssen für den Kuchen ...
+STAND DIREKT NEBEN DEINER HAUSTÜR.
+...
+Anscheinend warst du zu müde ihn zu bemerken und bist quer durch den Ort gerannt auf der Suche.
+Aber nun hast du ihn und kannst den Kuchen backen. Deine Freund:innen freuen sich darauf.
+Ab nach Hause.
+do Events._emit_can_make_party()
+=> END!

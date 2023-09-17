@@ -1,0 +1,171 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qnl2f"]
+
+[resource]
+script = ExtResource("1_qnl2f")
+titles = {
+"climbing": "14",
+"start": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"11": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"13": {
+"next_id": "14",
+"text": "climbing",
+"type": "title"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "15",
+"text": "Yeah, du hast Chalk dabei.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah, du hast Chalk dabei.",
+"type": "dialogue"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "16",
+"text": "Du machst dich warm, dehnst dich und schon geht es los.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du machst dich warm, dehnst dich und schon geht es los.",
+"type": "dialogue"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"text": "Die Routen sind genau richtig, nicht zu leicht, nicht zu schwer.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Routen sind genau richtig, nicht zu leicht, nicht zu schwer.",
+"type": "dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "18",
+"text": "Ein paar fiese Routen schaust du dir an, probierst etwas und lässt es dann.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ein paar fiese Routen schaust du dir an, probierst etwas und lässt es dann.",
+"type": "dialogue"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"text": "Heute ist dein besonderer Tag und der soll Spaß machen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Heute ist dein besonderer Tag und der soll Spaß machen.",
+"type": "dialogue"
+},
+"19": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"text": "Nach einiger Zeit bist du am Schwitzen und einfach glücklich. Die Routen waren einfach nice.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nach einiger Zeit bist du am Schwitzen und einfach glücklich. Die Routen waren einfach nice.",
+"type": "dialogue"
+},
+"20": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_climbed"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "21",
+"type": "mutation"
+},
+"21": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Vor dir stehen eine Reihe großer Felsen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vor dir stehen eine Reihe großer Felsen.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "An vielen Stellen siehst du weiße Pulverflecken - Kletterchalk!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "An vielen Stellen siehst du weiße Pulverflecken - Kletterchalk!",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Hier kannst du Bouldern. Der Boden ist weich, die Felsen trocken und die Routen sehen richtig gut aus.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hier kannst du Bouldern. Der Boden ist weich, die Felsen trocken und die Routen sehen richtig gut aus.",
+"type": "dialogue"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_chalk"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "8",
+"next_id": "7",
+"next_id_after": "8",
+"type": "condition"
+},
+"7": {
+"is_snippet": false,
+"next_id": "14",
+"parent_id": "6",
+"type": "goto"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"text": "Leider hast du keine Chalk dabei. So kannst du nicht bouldern.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leider hast du keine Chalk dabei. So kannst du nicht bouldern.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

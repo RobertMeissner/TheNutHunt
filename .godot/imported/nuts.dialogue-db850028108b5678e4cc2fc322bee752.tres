@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_we3ix"]
+
+[resource]
+script = ExtResource("1_we3ix")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "_emit_can_make_party",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "11",
+"type": "mutation"
+},
+"11": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Für einen Moment zweifelst du an dir.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Für einen Moment zweifelst du an dir.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Der Korb mit den Nüssen für den Kuchen ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Der Korb mit den Nüssen für den Kuchen ...",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "STAND DIREKT NEBEN DEINER HAUSTÜR.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "STAND DIREKT NEBEN DEINER HAUSTÜR.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "8",
+"text": "Anscheinend warst du zu müde ihn zu bemerken und bist quer durch den Ort gerannt auf der Suche.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Anscheinend warst du zu müde ihn zu bemerken und bist quer durch den Ort gerannt auf der Suche.",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"text": "Aber nun hast du ihn und kannst den Kuchen backen. Deine Freund:innen freuen sich darauf.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Aber nun hast du ihn und kannst den Kuchen backen. Deine Freund:innen freuen sich darauf.",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "Ab nach Hause.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ab nach Hause.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

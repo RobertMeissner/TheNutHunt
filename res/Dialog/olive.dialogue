@@ -1,0 +1,9 @@
+~ start
+
+Korb voller Oliven: Willst du eine Olive nehmen?
+- Ja
+	set State.olives += 1
+	Korb voller Oliven: Du hast eine Olive genommen.
+- Nein
+	Korb voller Oliven: Du machst nichts.
+=> END

@@ -1,0 +1,36 @@
+~ start
+
+Ein Kind sitzt zwischen den Ähren. 
+Es scheint schlafen zu wollen.
+Kind: Hey {{State.player_name}}.
+Kind: Ich kann nicht einschlafen. Erzählst du mir eine Gute Nacht Geschichte?
+{{State.player_name}}: Puuh, ich kann das nicht. Vielleicht kann das wer anderes?
+Das Kind fängt an zu schreien.
+Kind: [shake rate=20 level=10] Aber ich will JETZT schlafen und JETZT eine Gute Nacht Geschichte.[/shake]
+Du siehst davon ab erzieherische Maßnahmen einzuleiten und fängst an mit ChatGPT eine Geschichte zu schreiben ...
+
+{{State.player_name}}: Es war einmal in einer zauberhaften Unterwasserwelt, in der das tiefblaue Meer und seine Geheimnisse regierten, lebte eine freundliche Gruppe von Delphinen. Diese Delphine waren nicht gewöhnlich, denn sie besaßen magische Fähigkeiten, die sie zu wahren Wächtern des Ozeans machten.
+
+{{State.player_name}}: In diesem Ozean gab es eine Legende über eine verloren gegangene Perle, die die Kraft hatte, das gesamte Meer zu schützen und seine Schönheit zu bewahren. Die Delphine wussten um die Macht dieser Perle und hatten die Aufgabe, sie zu finden und zurück an ihren ursprünglichen Platz zu bringen, um das Gleichgewicht im Meer wiederherzustellen.
+
+{{State.player_name}}: Unter den Delphinen gab es eine ganz besondere Delphin-Dame namens Luna. Sie hatte ein strahlend weißes Fell und Augen, die so blau waren wie das tiefste Meer. Luna war klug, mutig und besaß eine besonders starke Verbindung zur Magie des Ozeans. Sie war entschlossen, die verlorene Perle zu finden und das Meer zu schützen.
+
+{{State.player_name}}: Begleitet von ihren besten Freunden, dem verspielten Fin und dem weisen Seeto, machte sich Luna auf die Reise, um das Geheimnis der verlorenen Perle zu lüften. Sie durchquerten Korallenriffe, schwammen durch versunkene Schiffe und erkundeten geheimnisvolle Höhlen, um Hinweise zu finden.
+
+{{State.player_name}}: In ihrer Suche nach der Perle stießen sie auf allerlei Herausforderungen, aber die Freundschaft und Zusammenarbeit zwischen den Delphinen half ihnen, diese zu überwinden. Luna lernte, ihre magischen Kräfte zu nutzen, um anderen Meeresbewohnern zu helfen und die Schönheit des Ozeans zu bewahren.
+
+{{State.player_name}}: Eines Tages, als der Sonnenuntergang den Himmel in prächtige Farben tauchte, entdeckten sie eine verborgene Unterwasserstadt. In ihrem Zentrum lag ein strahlender Korallenpalast. Dort, in einer glänzenden Muschel, fanden sie die verloren geglaubte Perle. Die Freude und Erleichterung in den Augen von Luna waren unverkennbar, als sie die Perle in ihre Flosse nahm.
+
+{{State.player_name}}: Doch bevor sie die Perle an ihren ursprünglichen Platz zurückbringen konnte, tauchte ein finsterer Zauberer namens Moros auf. Er begehrte die Macht der Perle, um das Meer zu beherrschen und die Unterwasserwelt zu unterwerfen. Moros entfachte einen wilden Sturm, der das Meer tobte und die Delphine zu überwältigen drohte.
+
+{{State.player_name}}: Doch Luna schöpfte all ihren Mut und ihre Magie, um sich Moros entgegenzustellen. Unter dem Schein des Mondes und unterstützt von den anderen Delphinen, gelang es Luna, den Zauberer zu besiegen und die Perle sicher an ihren Platz zurückzubringen.
+
+{{State.player_name}}: Das Meer beruhigte sich, und die verlorene Perle entfaltete ihre magische Kraft, um das Gleichgewicht wiederherzustellen. Von diesem Tag an leuchtete das Meer in noch prächtigeren Farben, und seine Schönheit strahlte weiter als je zuvor.
+
+{{State.player_name}}: Die Delphine wurden zu Hütern der verlorenen Perle ernannt, und Luna wurde zur Anführerin der magischen Delphine ernannt. Gemeinsam schützten sie das Meer und all seine Bewohner vor Gefahren und verbreiteten die Botschaft der Harmonie und des Friedens unter den Meereswesen.
+
+{{State.player_name}}: Und so lebten die Delphine mit Luna an ihrer Spitze glücklich und erfüllten ihre Bestimmung als Hüter der Magie des Ozeans, während ihre Freundschaft und Abenteuer die Legende der zauberhaften Delphine weiterleben ließ.
+
+Das Kind schläft tief und fest. Es ist besser jetzt heimlich davon zu schleichen und es nicht wieder aufzuwecken.
+
+=> END

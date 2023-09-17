@@ -1,0 +1,36 @@
+~ start
+
+if not State.has_done_caveman:
+	=> busy
+Frosch: Hey {{State.player_name}}. Ich habe Hunger!
+Frosch: Kannst du mir Oliven bringen?
+if State.olives > 0:
+	{{State.player_name}}: Mmmh...
+	- Ja, ich habe sogar schon welche dabei.
+		set State.olives -= 1
+		=> has_food
+	- Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?
+		Frosch: Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.
+else:
+	{{State.player_name}}: Mmmh...
+	- Ja.
+		Frosch: Dann schnell, ich habe Hunger!
+	- Nein. Aber kannst du mir helfen Nüsse für den Kuchen zu finden?
+		Frosch: Mmmh ... Ich kann nicht denken, wenn ich hungrig bin.
+=> END
+
+~ busy
+
+Vor dir liegt ein Frosch und döst.
+Nichts zu machen. Er schläft.
+
+=> END
+
+~ has_food
+
+Frosch: Danke! oooh, sogar mit scharfer Soße dran. Die liebe ich!
+Frosch: Du hast nach Nüssen gesucht, richtig?
+Frosch: Also ich selbst kann nichts mit Nüssen anfangen, aber vielleicht kann dir die Alte Dame helfen?
+set State.has_done_olives = true
+
+=> END

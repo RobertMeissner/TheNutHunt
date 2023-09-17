@@ -1,0 +1,426 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_c8b3l"]
+
+[resource]
+script = ExtResource("1_c8b3l")
+titles = {
+"busy": "20",
+"relaxed": "28",
+"relaxing": "38",
+"start": "3"
+}
+character_names = PackedStringArray("Alte Dame", "{{State.player_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"text": "Hast du dich heute schon mal ausgeruht und einfach den Tag genossen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hast du dich heute schon mal ausgeruht und einfach den Tag genossen?",
+"type": "dialogue"
+},
+"11": {
+"next_id": "12",
+"next_id_after": "16",
+"responses": PackedStringArray("11", "14"),
+"text": "Nein! Ich suche die Nüsse für den Kuchen. Kannst du mir helfen sie zu finden?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein! Ich suche die Nüsse für den Kuchen. Kannst du mir helfen sie zu finden?",
+"type": "response"
+},
+"12": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "11",
+"text": "Oh, diese alten Knochen können sich kaum noch bewegen. Du musst fürchte ich ohne mich suchen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, diese alten Knochen können sich kaum noch bewegen. Du musst fürchte ich ohne mich suchen.",
+"type": "dialogue"
+},
+"13": {
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "11",
+"type": "goto"
+},
+"14": {
+"next_id": "15",
+"next_id_after": "16",
+"text": "Nein. Aber warum nicht einfach jetzt?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein. Aber warum nicht einfach jetzt?",
+"type": "response"
+},
+"15": {
+"is_snippet": false,
+"next_id": "38",
+"parent_id": "14",
+"type": "goto"
+},
+"16": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"18": {
+"next_id": "20",
+"text": "busy",
+"type": "title"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "22",
+"text": "[wave amp=25 freq=5] Vor dir sitzt eine Alte Dame auf einer Bank.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=25 freq=5] Vor dir sitzt eine Alte Dame auf einer Bank.[/wave]",
+"type": "dialogue"
+},
+"22": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "23",
+"text": "[shake rate=20 level=10] Sie schläft. Mal wieder.[/shake]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=10] Sie schläft. Mal wieder.[/shake]",
+"type": "dialogue"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "25",
+"text": "Nichts zu machen, du willst die Dame nicht stören.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nichts zu machen, du willst die Dame nicht stören.",
+"type": "dialogue"
+},
+"25": {
+"is_snippet": false,
+"next_id": "end!",
+"type": "goto"
+},
+"27": {
+"next_id": "28",
+"text": "relaxed",
+"type": "title"
+},
+"28": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "29",
+"text": "{{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "{{State.player_name}}.",
+"type": "dialogue"
+},
+"29": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "30",
+"text": "Möchtest du nochmal mit mir sitzen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Möchtest du nochmal mit mir sitzen?",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_olives"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "6",
+"next_id": "4",
+"next_id_after": "6",
+"type": "condition"
+},
+"30": {
+"next_id": "31",
+"next_id_after": "34",
+"responses": PackedStringArray("30", "32"),
+"text": "Ja!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja!",
+"type": "response"
+},
+"31": {
+"is_snippet": false,
+"next_id": "38",
+"parent_id": "30",
+"type": "goto"
+},
+"32": {
+"next_id": "34",
+"next_id_after": "34",
+"text": "Nein.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein.",
+"type": "response"
+},
+"34": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"36": {
+"next_id": "38",
+"text": "relaxing",
+"type": "title"
+},
+"38": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "39",
+"text": "Schön, setz dich.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Schön, setz dich.",
+"type": "dialogue"
+},
+"39": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "40",
+"text": "Du setzt dich hin und genießt die Aussicht über das Meer, während die Sonne auf dem Wasser glitzert.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du setzt dich hin und genießt die Aussicht über das Meer, während die Sonne auf dem Wasser glitzert.",
+"type": "dialogue"
+},
+"4": {
+"is_snippet": false,
+"next_id": "20",
+"parent_id": "3",
+"type": "goto"
+},
+"40": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "41",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"41": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "42",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"42": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "43",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"43": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "44",
+"text": "Das tat soo gut. Jetzt gehe ich weiter suchen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das tat soo gut. Jetzt gehe ich weiter suchen.",
+"type": "dialogue"
+},
+"44": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "45",
+"text": "Weißt du denn, wo die Nüsse sind?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Weißt du denn, wo die Nüsse sind?",
+"type": "dialogue"
+},
+"45": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "46",
+"text": "Mmh, in unserem Dorf gehen Nüsse nicht einfach so verloren.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mmh, in unserem Dorf gehen Nüsse nicht einfach so verloren.",
+"type": "dialogue"
+},
+"46": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "47",
+"text": "Aber hier wohnt noch jemand, aber gut versteckt. Wenn du genau hinschaust, dann kannst du sie sehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Aber hier wohnt noch jemand, aber gut versteckt. Wenn du genau hinschaust, dann kannst du sie sehen.",
+"type": "dialogue"
+},
+"47": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "48",
+"text": "Sie zwinkert dir zu.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sie zwinkert dir zu.",
+"type": "dialogue"
+},
+"48": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_rested_on_bench"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "49",
+"type": "mutation"
+},
+"49": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "can_find_nuts"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "50",
+"type": "mutation"
+},
+"50": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "_emit_can_find_nuts",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "52",
+"type": "mutation"
+},
+"52": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_rested_on_bench"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "9",
+"next_id": "7",
+"next_id_after": "9",
+"type": "condition"
+},
+"7": {
+"is_snippet": false,
+"next_id": "28",
+"parent_id": "6",
+"type": "goto"
+},
+"9": {
+"character": "Alte Dame",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "Hallo {{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Hallo {{State.player_name}}.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

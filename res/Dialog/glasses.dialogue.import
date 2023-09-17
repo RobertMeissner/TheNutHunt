@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c5gbo0xkolrqs"
+path="res://.godot/imported/glasses.dialogue-6466b90b0b827b501fef88c5aecdf72d.tres"
+
+[deps]
+
+source_file="res://res/Dialog/glasses.dialogue"
+dest_files=["res://.godot/imported/glasses.dialogue-6466b90b0b827b501fef88c5aecdf72d.tres"]
+
+[params]
+
+defaults=true

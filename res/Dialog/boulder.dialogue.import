@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://c6wnku6uofqgl"
+path="res://.godot/imported/boulder.dialogue-65dff3c13d24859b4316ca41c66fa342.tres"
+
+[deps]
+
+source_file="res://res/Dialog/boulder.dialogue"
+dest_files=["res://.godot/imported/boulder.dialogue-65dff3c13d24859b4316ca41c66fa342.tres"]
+
+[params]
+
+defaults=true

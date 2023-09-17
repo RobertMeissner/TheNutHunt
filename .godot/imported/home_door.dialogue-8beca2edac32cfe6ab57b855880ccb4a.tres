@@ -1,0 +1,162 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_l8iy4"]
+
+[resource]
+script = ExtResource("1_l8iy4")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Zuhause", "{{State.significant_other_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "12",
+"parent_id": "5",
+"text": "{{State.final_words}}",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "final_words"
+}]),
+"value_in_text": "{{State.final_words}}"
+}]),
+"translation_key": "{{State.final_words}}",
+"type": "dialogue"
+},
+"12": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "can_make_party"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "5",
+"next_id": "4",
+"next_id_after": "12",
+"type": "condition"
+},
+"4": {
+"character": "Zuhause",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "3",
+"text": "Du hast noch keine Nüssen für den Kuchen. Dein Tag kann so nicht starten.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du hast noch keine Nüssen für den Kuchen. Dein Tag kann so nicht starten.",
+"type": "dialogue"
+},
+"5": {
+"next_conditional_id": "12",
+"next_id": "6",
+"next_id_after": "12",
+"type": "condition"
+},
+"6": {
+"character": "Zuhause",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"parent_id": "5",
+"text": "Du hast die Nüsse. Jetzt kannst du den Kuchen backen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du hast die Nüsse. Jetzt kannst du den Kuchen backen",
+"type": "dialogue"
+},
+"7": {
+"character": "Zuhause",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "8",
+"parent_id": "5",
+"text": "Endlich kann dein besonderer Tag starten.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Endlich kann dein besonderer Tag starten.",
+"type": "dialogue"
+},
+"8": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "_emit_can_make_party",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "9",
+"parent_id": "5",
+"type": "mutation"
+},
+"9": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "10",
+"parent_id": "5",
+"text": "Hey {{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Hey {{State.player_name}}.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

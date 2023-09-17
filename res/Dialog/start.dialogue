@@ -1,0 +1,13 @@
+~ start
+
+{{State.significant_other_name}}: Hallo {{State.player_name}}.
+{{State.significant_other_name}}: Heute ist dein besonderer Tag. Aber bevor der losgeht, willst du Kuchen backen.
+{{State.significant_other_name}}: Aber wo sind die Nüsse für den Kuchen? Die waren doch gerade noch da!
+{{State.significant_other_name}}: Finde die Nüsse. Vorher kann dein besonderer Tag einfach nicht starten!
+{{State.significant_other_name}}: Möchtest du einen Tipp?
+- Ja
+	Nüsse gehören zur Paleo-Diät. Wohnt hier vielleicht wer in einer Höhle?
+- Nein
+	Viel Spaß.
+
+=> END

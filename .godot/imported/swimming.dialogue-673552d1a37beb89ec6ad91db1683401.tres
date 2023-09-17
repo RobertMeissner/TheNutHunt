@@ -1,0 +1,160 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_egrjd"]
+
+[resource]
+script = ExtResource("1_egrjd")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"parent_id": "9",
+"text": "Du springst hinein und das Wasser ist perfekt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du springst hinein und das Wasser ist perfekt.",
+"type": "dialogue"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "9",
+"text": "Die Sicht ist so klar, du kannst den Fischen um dich herum beim Futtern und Schwimmen zusehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Sicht ist so klar, du kannst den Fischen um dich herum beim Futtern und Schwimmen zusehen.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "9",
+"text": "Es ist herrlich.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Es ist herrlich.",
+"type": "dialogue"
+},
+"13": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_done_swimming"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "16",
+"parent_id": "9",
+"type": "mutation"
+},
+"14": {
+"next_id": "16",
+"next_id_after": "16",
+"parent_id": "7",
+"text": "Nein.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein.",
+"type": "response"
+},
+"16": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Du siehst ein Boot im Wasser.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du siehst ein Boot im Wasser.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Das Wasser ist kristallglass, kleine Fische tümmeln sich hier und da.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das Wasser ist kristallglass, kleine Fische tümmeln sich hier und da.",
+"type": "dialogue"
+},
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_swimming_googles"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "7",
+"next_id": "6",
+"next_id_after": "16",
+"type": "condition"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "16",
+"parent_id": "5",
+"text": "Du würdest am liebsten direkt reinspringen und schwimmen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du würdest am liebsten direkt reinspringen und schwimmen.",
+"type": "dialogue"
+},
+"7": {
+"next_conditional_id": "16",
+"next_id": "8",
+"next_id_after": "16",
+"type": "condition"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "7",
+"text": "Möchtest du schwimmen gehen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Möchtest du schwimmen gehen?",
+"type": "dialogue"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "16",
+"parent_id": "7",
+"responses": PackedStringArray("9", "14"),
+"text": "Ja.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja.",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

@@ -1,0 +1,21 @@
+~ start
+
+Vor dir stehen eine Reihe großer Felsen.
+An vielen Stellen siehst du weiße Pulverflecken - Kletterchalk!
+Hier kannst du Bouldern. Der Boden ist weich, die Felsen trocken und die Routen sehen richtig gut aus.
+if State.has_chalk:
+	=> climbing
+Leider hast du keine Chalk dabei. So kannst du nicht bouldern.
+	
+
+=> END
+
+~ climbing
+Yeah, du hast Chalk dabei.
+Du machst dich warm, dehnst dich und schon geht es los.
+Die Routen sind genau richtig, nicht zu leicht, nicht zu schwer.
+Ein paar fiese Routen schaust du dir an, probierst etwas und lässt es dann.
+Heute ist dein besonderer Tag und der soll Spaß machen.
+Nach einiger Zeit bist du am Schwitzen und einfach glücklich. Die Routen waren einfach nice.
+set State.has_climbed = true
+=> END

@@ -1,0 +1,13 @@
+~ start
+
+Eine Boxpuppe steht im Wald.
+Was soll daran bitte schön besonders sein?!
+Geh weiter!
+if State.can_search_swimming_googles:
+	Du willst dich gerade umdrehen, als dir etwas sehr offensichtliches auffällt.
+	Die Boxpuppe trägt eine Schwimmbrille.
+	Du steckst die Schwimmbrille ein.
+	set State.has_swimming_googles = true
+	do Events._emit_has_searched_swimming_googles()
+
+=> END

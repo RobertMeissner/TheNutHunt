@@ -1,0 +1,6 @@
+~ start
+
+{{State.significant_other_name}}: Hey {{State.player_name}}.
+{{State.significant_other_name}}: {{State.final_words}}
+
+=> END

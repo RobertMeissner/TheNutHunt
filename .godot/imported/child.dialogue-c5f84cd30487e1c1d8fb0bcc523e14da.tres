@@ -1,0 +1,347 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_o6c37"]
+
+[resource]
+script = ExtResource("1_o6c37")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Kind", "{{State.player_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"text": "Du siehst davon ab erzieherische Maßnahmen einzuleiten und fängst an mit ChatGPT eine Geschichte zu schreiben ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du siehst davon ab erzieherische Maßnahmen einzuleiten und fängst an mit ChatGPT eine Geschichte zu schreiben ...",
+"type": "dialogue"
+},
+"12": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "14",
+"text": "Es war einmal in einer zauberhaften Unterwasserwelt, in der das tiefblaue Meer und seine Geheimnisse regierten, lebte eine freundliche Gruppe von Delphinen. Diese Delphine waren nicht gewöhnlich, denn sie besaßen magische Fähigkeiten, die sie zu wahren Wächtern des Ozeans machten.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Es war einmal in einer zauberhaften Unterwasserwelt, in der das tiefblaue Meer und seine Geheimnisse regierten, lebte eine freundliche Gruppe von Delphinen. Diese Delphine waren nicht gewöhnlich, denn sie besaßen magische Fähigkeiten, die sie zu wahren Wächtern des Ozeans machten.",
+"type": "dialogue"
+},
+"14": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "16",
+"text": "In diesem Ozean gab es eine Legende über eine verloren gegangene Perle, die die Kraft hatte, das gesamte Meer zu schützen und seine Schönheit zu bewahren. Die Delphine wussten um die Macht dieser Perle und hatten die Aufgabe, sie zu finden und zurück an ihren ursprünglichen Platz zu bringen, um das Gleichgewicht im Meer wiederherzustellen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "In diesem Ozean gab es eine Legende über eine verloren gegangene Perle, die die Kraft hatte, das gesamte Meer zu schützen und seine Schönheit zu bewahren. Die Delphine wussten um die Macht dieser Perle und hatten die Aufgabe, sie zu finden und zurück an ihren ursprünglichen Platz zu bringen, um das Gleichgewicht im Meer wiederherzustellen.",
+"type": "dialogue"
+},
+"16": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "18",
+"text": "Unter den Delphinen gab es eine ganz besondere Delphin-Dame namens Luna. Sie hatte ein strahlend weißes Fell und Augen, die so blau waren wie das tiefste Meer. Luna war klug, mutig und besaß eine besonders starke Verbindung zur Magie des Ozeans. Sie war entschlossen, die verlorene Perle zu finden und das Meer zu schützen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Unter den Delphinen gab es eine ganz besondere Delphin-Dame namens Luna. Sie hatte ein strahlend weißes Fell und Augen, die so blau waren wie das tiefste Meer. Luna war klug, mutig und besaß eine besonders starke Verbindung zur Magie des Ozeans. Sie war entschlossen, die verlorene Perle zu finden und das Meer zu schützen.",
+"type": "dialogue"
+},
+"18": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "20",
+"text": "Begleitet von ihren besten Freunden, dem verspielten Fin und dem weisen Seeto, machte sich Luna auf die Reise, um das Geheimnis der verlorenen Perle zu lüften. Sie durchquerten Korallenriffe, schwammen durch versunkene Schiffe und erkundeten geheimnisvolle Höhlen, um Hinweise zu finden.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Begleitet von ihren besten Freunden, dem verspielten Fin und dem weisen Seeto, machte sich Luna auf die Reise, um das Geheimnis der verlorenen Perle zu lüften. Sie durchquerten Korallenriffe, schwammen durch versunkene Schiffe und erkundeten geheimnisvolle Höhlen, um Hinweise zu finden.",
+"type": "dialogue"
+},
+"20": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "22",
+"text": "In ihrer Suche nach der Perle stießen sie auf allerlei Herausforderungen, aber die Freundschaft und Zusammenarbeit zwischen den Delphinen half ihnen, diese zu überwinden. Luna lernte, ihre magischen Kräfte zu nutzen, um anderen Meeresbewohnern zu helfen und die Schönheit des Ozeans zu bewahren.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "In ihrer Suche nach der Perle stießen sie auf allerlei Herausforderungen, aber die Freundschaft und Zusammenarbeit zwischen den Delphinen half ihnen, diese zu überwinden. Luna lernte, ihre magischen Kräfte zu nutzen, um anderen Meeresbewohnern zu helfen und die Schönheit des Ozeans zu bewahren.",
+"type": "dialogue"
+},
+"22": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "24",
+"text": "Eines Tages, als der Sonnenuntergang den Himmel in prächtige Farben tauchte, entdeckten sie eine verborgene Unterwasserstadt. In ihrem Zentrum lag ein strahlender Korallenpalast. Dort, in einer glänzenden Muschel, fanden sie die verloren geglaubte Perle. Die Freude und Erleichterung in den Augen von Luna waren unverkennbar, als sie die Perle in ihre Flosse nahm.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eines Tages, als der Sonnenuntergang den Himmel in prächtige Farben tauchte, entdeckten sie eine verborgene Unterwasserstadt. In ihrem Zentrum lag ein strahlender Korallenpalast. Dort, in einer glänzenden Muschel, fanden sie die verloren geglaubte Perle. Die Freude und Erleichterung in den Augen von Luna waren unverkennbar, als sie die Perle in ihre Flosse nahm.",
+"type": "dialogue"
+},
+"24": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "26",
+"text": "Doch bevor sie die Perle an ihren ursprünglichen Platz zurückbringen konnte, tauchte ein finsterer Zauberer namens Moros auf. Er begehrte die Macht der Perle, um das Meer zu beherrschen und die Unterwasserwelt zu unterwerfen. Moros entfachte einen wilden Sturm, der das Meer tobte und die Delphine zu überwältigen drohte.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Doch bevor sie die Perle an ihren ursprünglichen Platz zurückbringen konnte, tauchte ein finsterer Zauberer namens Moros auf. Er begehrte die Macht der Perle, um das Meer zu beherrschen und die Unterwasserwelt zu unterwerfen. Moros entfachte einen wilden Sturm, der das Meer tobte und die Delphine zu überwältigen drohte.",
+"type": "dialogue"
+},
+"26": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "28",
+"text": "Doch Luna schöpfte all ihren Mut und ihre Magie, um sich Moros entgegenzustellen. Unter dem Schein des Mondes und unterstützt von den anderen Delphinen, gelang es Luna, den Zauberer zu besiegen und die Perle sicher an ihren Platz zurückzubringen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Doch Luna schöpfte all ihren Mut und ihre Magie, um sich Moros entgegenzustellen. Unter dem Schein des Mondes und unterstützt von den anderen Delphinen, gelang es Luna, den Zauberer zu besiegen und die Perle sicher an ihren Platz zurückzubringen.",
+"type": "dialogue"
+},
+"28": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "30",
+"text": "Das Meer beruhigte sich, und die verlorene Perle entfaltete ihre magische Kraft, um das Gleichgewicht wiederherzustellen. Von diesem Tag an leuchtete das Meer in noch prächtigeren Farben, und seine Schönheit strahlte weiter als je zuvor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das Meer beruhigte sich, und die verlorene Perle entfaltete ihre magische Kraft, um das Gleichgewicht wiederherzustellen. Von diesem Tag an leuchtete das Meer in noch prächtigeren Farben, und seine Schönheit strahlte weiter als je zuvor.",
+"type": "dialogue"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Ein Kind sitzt zwischen den Ähren.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ein Kind sitzt zwischen den Ähren.",
+"type": "dialogue"
+},
+"30": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "32",
+"text": "Die Delphine wurden zu Hütern der verlorenen Perle ernannt, und Luna wurde zur Anführerin der magischen Delphine ernannt. Gemeinsam schützten sie das Meer und all seine Bewohner vor Gefahren und verbreiteten die Botschaft der Harmonie und des Friedens unter den Meereswesen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Delphine wurden zu Hütern der verlorenen Perle ernannt, und Luna wurde zur Anführerin der magischen Delphine ernannt. Gemeinsam schützten sie das Meer und all seine Bewohner vor Gefahren und verbreiteten die Botschaft der Harmonie und des Friedens unter den Meereswesen.",
+"type": "dialogue"
+},
+"32": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "34",
+"text": "Und so lebten die Delphine mit Luna an ihrer Spitze glücklich und erfüllten ihre Bestimmung als Hüter der Magie des Ozeans, während ihre Freundschaft und Abenteuer die Legende der zauberhaften Delphine weiterleben ließ.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Und so lebten die Delphine mit Luna an ihrer Spitze glücklich und erfüllten ihre Bestimmung als Hüter der Magie des Ozeans, während ihre Freundschaft und Abenteuer die Legende der zauberhaften Delphine weiterleben ließ.",
+"type": "dialogue"
+},
+"34": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "36",
+"text": "Das Kind schläft tief und fest. Es ist besser jetzt heimlich davon zu schleichen und es nicht wieder aufzuwecken.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das Kind schläft tief und fest. Es ist besser jetzt heimlich davon zu schleichen und es nicht wieder aufzuwecken.",
+"type": "dialogue"
+},
+"36": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Es scheint schlafen zu wollen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Es scheint schlafen zu wollen.",
+"type": "dialogue"
+},
+"5": {
+"character": "Kind",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Hey {{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Hey {{State.player_name}}.",
+"type": "dialogue"
+},
+"6": {
+"character": "Kind",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "Ich kann nicht einschlafen. Erzählst du mir eine Gute Nacht Geschichte?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich kann nicht einschlafen. Erzählst du mir eine Gute Nacht Geschichte?",
+"type": "dialogue"
+},
+"7": {
+"character": "{{State.player_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"next_id": "8",
+"text": "Puuh, ich kann das nicht. Vielleicht kann das wer anderes?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Puuh, ich kann das nicht. Vielleicht kann das wer anderes?",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"text": "Das Kind fängt an zu schreien.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das Kind fängt an zu schreien.",
+"type": "dialogue"
+},
+"9": {
+"character": "Kind",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "[shake rate=20 level=10] Aber ich will JETZT schlafen und JETZT eine Gute Nacht Geschichte.[/shake]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=10] Aber ich will JETZT schlafen und JETZT eine Gute Nacht Geschichte.[/shake]",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

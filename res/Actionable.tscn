@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://3emb1ci1kypy"]
+
+[ext_resource type="Script" path="res://res/Actionable.gd" id="1_cnx7h"]
+[ext_resource type="Texture2D" uid="uid://u66lsjfs6kky" path="res://res/NPCs/DialogInfo.png" id="2_0elep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01de4"]
+atlas = ExtResource("2_0elep")
+region = Rect2(0, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xadb"]
+atlas = ExtResource("2_0elep")
+region = Rect2(20, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8qio"]
+atlas = ExtResource("2_0elep")
+region = Rect2(40, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqlp6"]
+atlas = ExtResource("2_0elep")
+region = Rect2(60, 0, 20, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gwtih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01de4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xadb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8qio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqlp6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Actionable" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_cnx7h")
+
+[node name="DialogBubble" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 9
+position = Vector2(0, -17)
+sprite_frames = SubResource("SpriteFrames_gwtih")

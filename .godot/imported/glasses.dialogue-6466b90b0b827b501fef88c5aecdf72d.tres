@@ -1,0 +1,139 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fradl"]
+
+[resource]
+script = ExtResource("1_fradl")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "has_swimming_googles"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "11",
+"parent_id": "6",
+"type": "mutation"
+},
+"11": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Events"
+}, {
+"type": "dot"
+}, {
+"function": "_emit_has_searched_swimming_googles",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "13",
+"parent_id": "6",
+"type": "mutation"
+},
+"13": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Eine Boxpuppe steht im Wald.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eine Boxpuppe steht im Wald.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Was soll daran bitte schön besonders sein?!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Was soll daran bitte schön besonders sein?!",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Geh weiter!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Geh weiter!",
+"type": "dialogue"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "can_search_swimming_googles"
+}, {
+"type": "colon"
+}])
+},
+"next_conditional_id": "13",
+"next_id": "7",
+"next_id_after": "13",
+"type": "condition"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "8",
+"parent_id": "6",
+"text": "Du willst dich gerade umdrehen, als dir etwas sehr offensichtliches auffällt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du willst dich gerade umdrehen, als dir etwas sehr offensichtliches auffällt.",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "6",
+"text": "Die Boxpuppe trägt eine Schwimmbrille.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Boxpuppe trägt eine Schwimmbrille.",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"parent_id": "6",
+"text": "Du steckst die Schwimmbrille ein.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du steckst die Schwimmbrille ein.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"

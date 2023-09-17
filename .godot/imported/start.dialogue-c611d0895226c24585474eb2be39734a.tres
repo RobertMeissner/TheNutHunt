@@ -1,0 +1,172 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dvy5n"]
+
+[resource]
+script = ExtResource("1_dvy5n")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("{{State.significant_other_name}}")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"next_id": "11",
+"next_id_after": "13",
+"text": "Nein",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein",
+"type": "response"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "10",
+"text": "Viel Spaß.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Viel Spaß.",
+"type": "dialogue"
+},
+"13": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "4",
+"text": "Hallo {{State.player_name}}.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "player_name"
+}]),
+"value_in_text": "{{State.player_name}}"
+}]),
+"translation_key": "Hallo {{State.player_name}}.",
+"type": "dialogue"
+},
+"4": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "5",
+"text": "Heute ist dein besonderer Tag. Aber bevor der losgeht, willst du Kuchen backen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Heute ist dein besonderer Tag. Aber bevor der losgeht, willst du Kuchen backen.",
+"type": "dialogue"
+},
+"5": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "6",
+"text": "Aber wo sind die Nüsse für den Kuchen? Die waren doch gerade noch da!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Aber wo sind die Nüsse für den Kuchen? Die waren doch gerade noch da!",
+"type": "dialogue"
+},
+"6": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "7",
+"text": "Finde die Nüsse. Vorher kann dein besonderer Tag einfach nicht starten!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Finde die Nüsse. Vorher kann dein besonderer Tag einfach nicht starten!",
+"type": "dialogue"
+},
+"7": {
+"character": "{{State.significant_other_name}}",
+"character_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "significant_other_name"
+}]),
+"value_in_text": "{{State.significant_other_name}}"
+}]),
+"next_id": "8",
+"text": "Möchtest du einen Tipp?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Möchtest du einen Tipp?",
+"type": "dialogue"
+},
+"8": {
+"next_id": "9",
+"next_id_after": "13",
+"responses": PackedStringArray("8", "10"),
+"text": "Ja",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja",
+"type": "response"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "8",
+"text": "Nüsse gehören zur Paleo-Diät. Wohnt hier vielleicht wer in einer Höhle?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nüsse gehören zur Paleo-Diät. Wohnt hier vielleicht wer in einer Höhle?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.17.0"
